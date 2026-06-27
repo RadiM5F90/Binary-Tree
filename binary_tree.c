@@ -91,7 +91,7 @@ tree_node create_tree_node(int _value) {
 }
 
 void destroy_tree_node(tree_node* _node) {
-    if (_node == NULL) return;
+    if (_node == NULL || *_node == NULL) return;
 
     free(*_node);
     *_node = NULL;
